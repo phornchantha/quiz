@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body>
+    <div class="home-box custom-box">
+        <h3>Instruction:</h3>
+        <br>
+        <p>Total number of questions: <span class="total-question">5</span></p>
+        <br>
+        <p>Challenge yourself and see how much you know! Let's get started and have some fun!</p>
+        <br>
+        <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+        <br>
+    </div>
+
+    <div class="quiz-box custom-box hide">
+        <div class="question-number"></div>
+        <div class="question-text"></div>
+        <div class="option-container"></div>
+        
+        <div class="next-question-button">
+            <button type="button" class="btn" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="answer-indicator"></div>
+    </div>
+
+    <div class="result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr><td>Total Questions</td><td><span class="total-question">5</span></td></tr>
+            <tr><td>Attempt</td><td><span class="total-attempt">3</span></td></tr>
+            <tr><td>Correct</td><td><span class="total-correct">3</span></td></tr>
+            <tr><td>Wrong</td><td><span class="total-wrong">1</span></td></tr>
+            <tr><td>Percentage</td><td><span class="percentage">60.00%</span></td></tr>
+            <tr><td>Your Total Score</td><td><span class="total-score">3 / 5</span></td></tr>
+        </table>
+        <button type="button" class="btn" onclick="startQuiz()">Try Again</button>
+        <button type="button" class="btn" onclick="goHome()">Go to Home</button>
+    </div>
+
+    <script src="question.js"></script>
+    <script src="app.js"></script>
+</body>   
+</html>
